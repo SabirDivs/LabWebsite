@@ -1,0 +1,197 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(240, 239, 239);
+}
+
+.about-header{
+    background-image: url(./Images/banner1.jpeg);
+}
+/* #header{
+    height: auto;
+} */
+.navbar {
+    min-height: auto;
+}
+.navbar-brand {
+    padding: 0 15px;
+    height: 60px;
+    line-height: 60px;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+}
+
+.top-link {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: hsla(182, 63%, 54%);
+    width: 2.7rem;
+    height: 2.7rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.7rem;
+    color: #fff;
+    animation: bounce 2s ease-in-out infinite;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+.nav-link {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 1rem;
+    margin-left: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.banner{
+    background-color: whitesmoke;
+    background-size: cover;
+    background-image: url(./Images/banner.png);
+    height: 30rem;
+    position: relative;
+}
+#progressCounterSection{
+    height: auto;
+    background-color: rgb(206, 234, 245);
+    margin: 5%;
+}
+
+.row.counter{
+    position: relative;
+    margin: auto;
+    background-color: #fff;
+
+}
+
+.counter-box {
+	display: block;
+	background: #fff;
+	padding: 40px 20px 37px;
+	text-align: center
+}
+
+.counter-box p {
+	margin: 5px 0 0;
+	padding: 0;
+	color: #909090;
+	font-size: 18px;
+	font-weight: 500
+}
+/*
+.counter-box i {
+	font-size: 60px;
+	margin: 0 0 15px;
+	color: #d2d2d2
+} */
+ 
+.counter { 
+	font-size: 32px;
+	font-weight: 700;
+	color: #666;
+	line-height: 28px
+}
+/* 
+.counter-box.colored {
+      background: #3acf87;
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+	color: #fff
+} */
+
+
+#LabHeader{
+    height: 200px;
+    color: whitesmoke;
+    margin: 5%;
+    
+}
+#services{
+    height: auto;
+    margin: 5%;
+    
+}
+#whatsNew{
+    height: auto;
+    background-color:rgb(206, 234, 245);
+    margin: 5%;
+}
+
+#contactForm{
+    height: auto;
+    background-color: whitesmoke;
+}
+.lab-address{
+    height: auto;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.lab-address-info{
+    padding: 5%;
+}
+.formDiv{
+    height: auto;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form{
+    margin-top: 10%;
+}
+.contact-form .btnContact {
+    width: 60%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+body:nth-child(2) > footer.footer.text-center.text-lg-start.bg-dark.text-light:nth-child(8){
+    margin-top: 5%;
+}
+body:nth-child(2) > footer.footer.text-center.text-lg-start.bg-dark.text-light:nth-child(8){
+    padding-left: 60px;
+    padding-right: 60px;
+}
+

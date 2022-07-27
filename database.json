@@ -1,51 +1,161 @@
 {
-    "leaders": [
-        {
-            "name":"Dr. Haleem Farman",
-            "phd":"University of Peshawar, Pakistan",
-            "major":"Computer Science",
-            "google_h_index":"",
-            "totle_google_citations":"",
-            "total_scopus_citations":"",
-            "orcid_id":"",
-            "feilds_of_interests":"",
-            "affiliations":""
+    "leaders":{
+        "leader_1": {
+            "name": "Dr. Haleem Farman",
+            "phd": "University of Peshawar, Pakistan",
+            "major": "Computer Science",
+            "google_h_index": "18",
+            "totle_google_citations": "1204",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
         },
-        {
-            "name":"Dr. Jamil Ahmad",
-            "phd":"",
-            "major":"Computer Science",
-            "google_h_index":"",
-            "totle_google_citations":"",
-            "total_scopus_citations":"",
-            "orcid_id":"",
-            "feilds_of_interests":"",
-            "affiliations":""
+        "leader_2": {
+            "name": "Dr. Jamil Ahmad",
+            "phd": "Sejong University, Seoul, South korea",
+            "major": "Computer Science",
+            "google_h_index": "29",
+            "totle_google_citations": "3213",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "Image Processing, Pattern Recognition, Cpmputer Vision, Machine Intelligence, Deep Learning, Web Development",
+            "affiliations": ""
         }
-    ],
-    "researchers":[
-        {
-            "name":"Researcher-1",
-            "phd":"",
-            "major":"",
-            "google_h_index":"",
-            "totle_google_citations":"",
-            "total_scopus_citations":"",
-            "orcid_id":"",
-            "feilds_of_interests":"",
-            "affiliations":""   
+    },
+    "researchers": {
+        "#1": {
+            "name": "Researcher-1",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
         },
-        {
-            "name":"Researcher-2",
-            "phd":"",
-            "major":"",
-            "google_h_index":"",
-            "totle_google_citations":"",
-            "total_scopus_citations":"",
-            "orcid_id":"",
-            "feilds_of_interests":"",
-            "affiliations":"" 
+        "#2": {
+            "name": "Researcher-2",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
         }
-
-    ]
+    },
+    "research_assistants": {
+        "#1": {
+            "name": "R-assistants-1",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        },
+        "#2": {
+            "name": "R-assistants-1",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        },
+        "#3": {
+            "name": "R-assistants-1",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        }
+    },
+    "current_phd_students": {
+        "#1": {
+            "name": "R-assistants-1",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        },
+        "#2": {
+            "name": "R-assistants-1",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        },
+        "#3": {
+            "name": "R-assistants-1",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        }
+    },
+    "undergraduate_students": {
+        "#1": {
+            "name": "Umair",
+            "phd": "",
+            "MSCS": "MSCS",
+            "BSCS": "",
+            "major": "Computer Science",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        },
+        "#2": {
+            "name": "Sultan Zaib",
+            "phd": "",
+            "MSCS": "MSCS",
+            "BSCS": "",
+            "major": "Computer Science",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        },
+        "#3": {
+            "name": "R-assistants-1",
+            "phd": "",
+            "MSCS": "",
+            "BSCS": "",
+            "major": "",
+            "google_h_index": "",
+            "totle_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        }
+    }
 }

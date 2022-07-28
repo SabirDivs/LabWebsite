@@ -164,6 +164,13 @@
             "funded_by":"Sustainable Development Unit, P&D Dept. Govt. of Khyber Pakhtunkhwa, Pakistan",
             "amount":"PKR 9.002 Million",
             "status":"Completed"
+        },
+        "id_2":{
+            "title":"Monitoring of Fruit Plants for Disease Identification using Deep Learning",
+            "funded_by":"Higher Education Commission, Islamabad, Pakistan",
+            "amount":"PKR 11.761 million",
+            "status":"Completed"
         }
+
     }
 }

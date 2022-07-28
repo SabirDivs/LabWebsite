@@ -63,7 +63,27 @@
         </div>
     </div>
     <!-- Banner Area ends here -->
-
+    <!-- 
+     Dynomic Approach to add table row as per number of records   
+     -->
+    <script>
+        fetch('./database.json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    appendData(data);
+                    // console.log(data.projects)
+                })
+                .catch(function (err) {
+                    console.log('error: ' + err);
+                });
+        function appendData(data){
+           Object.values(data.projects).forEach(element => {
+            console.log(element)
+           });
+        }
+    </script>
 
     <section id="projects">
         <div class="container">
@@ -82,6 +102,12 @@
                         <td scope="row">Assisting Farmers in Plant Disease Detection and Treatment at Early Stages using Smart Phone Application </td>
                         <td>Sustainable Development Unit, P&D Dept. Govt. of Khyber Pakhtunkhwa, Pakistan</td>
                         <td>PKR 9.002 Million</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Monitoring of Fruit Plants for Disease Identification using Deep Learning</td>
+                        <td>Higher Education Commission, Islamabad, Pakistan</td>
+                        <td>PKR 11.761 million</td>
                         <td>Completed</td>
                     </tr>
                 </tbody>

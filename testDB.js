@@ -78,5 +78,18 @@
 // };
 // console.log(db.leaders[0]);
 
-const database = require("./database.json");
-console.log(database.leaders["#1"]);
+// const database = require("./database.json");
+// console.log(database);
+
+// $("#tbody").append(`<tr id="R${++rowIdx}">
+//           <td class="row-index text-center">
+//                 <p>Row ${rowIdx}</p></td>
+//            <td class="text-center">
+//             <button class="btn btn-danger remove"
+//                 type="button">Remove</button>
+//             </td>
+//            </tr>`);
+
+// for (let [key, value] of Object.entries(p)) {
+//   console.log(`${key}: ${value}`);
+// }

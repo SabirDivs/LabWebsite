@@ -157,5 +157,13 @@
             "feilds_of_interests": "",
             "affiliations": ""
         }
+    },
+    "projects":{
+        "id_1":{
+            "title":"Assisting Farmers in Plant Disease Detection and Treatment at Early Stages using Smart Phone Application",
+            "funded_by":"Sustainable Development Unit, P&D Dept. Govt. of Khyber Pakhtunkhwa, Pakistan",
+            "amount":"PKR 9.002 Million",
+            "status":"Completed"
+        }
     }
 }

@@ -69,16 +69,30 @@
                     console.log('error: ' + err);
                 });
             function appendData(data) {
-                console.log(data.leaders.leader_1)
-                document.getElementById("leader_1_Name").innerHTML = data.leaders.leader_1.name
-                document.getElementById("leader_1_phd").innerHTML = data.leaders.leader_1.phd
-                document.getElementById("leader_1_G_index").innerHTML = data.leaders.leader_1.total_google_citations
-                document.getElementById("leader_1_G_citations").innerHTML = data.leaders.total_scopus_citations
-                // document.getElementById("leader_1_S_citations").innerHTML = data.leaders.leader_1.name
-                // document.getElementById("leader_1_orcid").innerHTML = data.leaders.leader_1.name
-                // document.getElementById("leader_1_FOI").innerHTML = data.leaders.leader_1.name
-                // document.getElementById("leader_1_affiliation").innerHTML = data.leaders.leader_1.name
-
+                // leader_1 data
+                // console.log(data.leaders.leader_1)
+                document.getElementById("leader_1_name").innerHTML = data.leaders.leader_1.name;
+                document.getElementById("leader_1_phd").innerHTML = data.leaders.leader_1.phd;
+                document.getElementById("leader_1_G_index").innerHTML = data.leaders.leader_1.google_h_index;
+                document.getElementById("leader_1_G_citations").innerHTML = data.leaders.leader_1.total_google_citations;                
+                document.getElementById("leader_1_S_citations").innerHTML = data.leaders.leader_1.total_scopus_citations;                
+                document.getElementById("leader_1_orcid").innerHTML = data.leaders.leader_1.orcid_id;
+                document.getElementById("leader_1_FOI").innerHTML = data.leaders.leader_1.feilds_of_interests;
+                document.getElementById("leader_1_affiliation").innerHTML = data.leaders.leader_1.affiliations;
+                
+                
+                
+                // Leader_2 Data
+                console.log(data.leaders.leader_2)
+                document.getElementById("leader_2_name").innerHTML = data.leaders.leader_2.name;
+                document.getElementById("leader_2_phd").innerHTML = data.leaders.leader_2.phd;
+                document.getElementById("leader_2_G_index").innerHTML = data.leaders.leader_2.google_h_index;
+                document.getElementById("leader_2_G_citations").innerHTML = data.leaders.leader_2.total_google_citations;                
+                document.getElementById("leader_2_S_citations").innerHTML = data.leaders.leader_2.total_scopus_citations;                
+                document.getElementById("leader_2_orcid").innerHTML = data.leaders.leader_2.orcid_id;
+                document.getElementById("leader_2_FOI").innerHTML = data.leaders.leader_2.feilds_of_interests;
+                document.getElementById("leader_2_affiliation").innerHTML = data.leaders.leader_2.affiliations;
+                
                 // var mainContainer = document.getElementById("team-Leaders");
                 // const allElements = document.getElementsByTagName('*');
 
@@ -116,25 +130,25 @@
                                     src="https://icp.edu.pk/staff_directory/faculty_images/halemm_farman.jpg"
                                     class="img-fluid  img-thumbnail rounded-circle" alt="image1">
                                 <div class="content mt-2">
-                                    <a href="./profiles.html" class="text-reset">
-                                        <!-- https://drive.google.com/file/d/1OLpM7QA_BkaecsGipgmQpOnRIxW0nYIX/view?usp=sharing -->
-                                        <h4 id="leader_1_Name"></h4>
+                                    <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao" class="text-reset">
+                                        <!-- https://docs.google.com/document/d/1ZQHPPN3_b5ARYAt5hZ0dt2XX6wR6geMT/edit?usp=sharing&ouid=105807333424226961915&rtpof=true&sd=true -->
+                                        <h4 id="leader_1_name"></h4>
                                     </a>
                                     <div class="card-body" style="text-align: left">
-                                        <span>PhD:</span><p id="leader_1_phd" style="all: unset;"></p><br>
-                                        <span >Google h-index:</span><p id="leader_1_G_index" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Total Google Citations:</span><p id="leader_1_G_citations" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Total SCOPUS Citations:</span><p id="leader_1_S_citations" style="all: unset;"></p><br>
-                                        <span style="all: unset;">ORCID ID:</span><p id="leader_1_orcid" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Feilds of Interest:</span><p id="leader_1_FOI" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Affiliation:</span><p id="leader_1_affiliation"></p>
+                                        <span>PhD:</span> <p id="leader_1_phd" style="all: unset;"></p><br>
+                                        <span >Google h-index:</span> <p id="leader_1_G_index" style="all: unset;"></p><br>
+                                        <span style="all: unset;">Total Google Citations:</span> <p id="leader_1_G_citations" style="all: unset;"></p><br>
+                                        <span style="all: unset;">Total SCOPUS Citations:</span> <p id="leader_1_S_citations" style="all: unset;"></p><br>
+                                        <span style="all: unset;">ORCID ID:</span> <p id="leader_1_orcid" style="all: unset;"></p><br>
+                                        <span style="all: unset;">Feilds of Interest:</span> <p id="leader_1_FOI" style="all: unset;"></p><br>
+                                        <span style="all: unset;">Affiliation:</span> <p id="leader_1_affiliation"></p>
                                         <a href="" class="me-4 text-reset">
                                             <i class="fab fa-twitter"></i>
                                         </a>
-                                        <a href="" class="me-4 text-reset">
+                                        <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao" class="me-4 text-reset">
                                             <i class="fab fa-google"></i>
                                         </a>
-                                        <a href="" class="me-4 text-reset">
+                                        <a href="https://www.linkedin.com/in/haleem-farman-0a8a7611" class="me-4 text-reset">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
                                         <a href="" class="me-4 text-reset">
@@ -154,28 +168,27 @@
                                     src="https://icp.edu.pk/staff_directory/faculty_images/jamil_thumb.jpg"
                                     class="img-fluid  img-thumbnail rounded-circle" alt="image1">
                                 <div class="content mt-2">
-                                    <a href="./profiles.html" class="text-reset">
-                                        <h4>Dr. Jamil Ahmad</h4>
+                                    <a href="https://scholar.google.com/citations?user=7dw-9YgAAAAJ&hl=en&oi=ao" class="text-reset">
+                                        <h4 id="leader_2_name"></h4>
                                     </a>
                                     <div class="card-body" style="text-align: left">
-                                        <p><span>PhD:</span> <br>
-                                            <span>Google h-index:</span><br>
-                                            <span>Total Google Citations:</span><br>
-                                            <span>Total SCOPUS Citations:</span><br>
-                                            <span>ORCID ID:</span><br>
-                                            <span>Feilds of Interest:</span><br>
-                                            <span>Affiliation:</span>
-                                        </p><br>
+                                        <span>PhD:</span> <p id="leader_2_phd" style="all: unset;"></p><br>
+                                        <span >Google h-index:</span> <p id="leader_2_G_index" style="all: unset;"></p><br>
+                                        <span style="all: unset;">Total Google Citations:</span> <p id="leader_2_G_citations" style="all: unset;"></p><br>
+                                        <span style="all: unset;">Total SCOPUS Citations:</span> <p id="leader_2_S_citations" style="all: unset;"></p><br>
+                                        <span style="all: unset;">ORCID ID:</span> <p id="leader_2_orcid" style="all: unset;"></p><br>
+                                        <span style="all: unset;">Feilds of Interest:</span> <p id="leader_2_FOI" style="all: unset;"></p><br>
+                                        <span style="all: unset;">Affiliation:</span> <p id="leader_2_affiliation"></p>
                                         <a href="" class="me-4 text-reset">
                                             <i class="fab fa-twitter"></i>
                                         </a>
-                                        <a href="" class="me-4 text-reset">
+                                        <a href="https://scholar.google.com/citations?user=7dw-9YgAAAAJ&hl=en&oi=ao" class="me-4 text-reset">
                                             <i class="fab fa-google"></i>
                                         </a>
-                                        <a href="" class="me-4 text-reset">
+                                        <a href="https://www.linkedin.com/in/jamilahmadicp" class="me-4 text-reset">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
-                                        <a href="" class="me-4 text-reset">
+                                        <a href="https://github.com/jamilahmadicp" class="me-4 text-reset">
                                             <i class="fab fa-github"></i>
                                         </a>
                                     </div>

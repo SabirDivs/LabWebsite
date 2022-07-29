@@ -10,178 +10,105 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
         <title>Convert JSON Data to HTML Table</title>
-
-        <script>
-            // fetch("./testJSON.json")
-            //     .then(function (response) {
-            //         return response.json();
-            //     })
-            //     .then(function (data) {
-            //         appendData(data);
-            //         // console.log(data);
-            //     })
-            //     .catch(function (err) {
-            //         console.log("error: " + err);
-            //     });
-            // function appendData(data){
-            //     console.log(data)
-            //     $("#tbody").append(`<tr id="ds">
-            //         <td>${data.p}</td>
-            //         <td></td>
-            //         </tr>`);
-            // }
-
-        </script>
     </head>
 
     <body>
-        <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
-        <p id="showData"></p>
+        <div class="container">
+            <h1 class="display-4">Dynomic data entry Testing page</h1>
+        </div>
+        <section>
+            <div class="container">
+                <table class="table" id="table">
+                    <thead>
+                        <tr id="thead-tr">
+                            <!-- <th>No.</th> -->
+                            <th>Title</th>
+                            <th>Funded By</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+            <script>
+                // Partially Functional
 
-        <script>
-            function CreateTableFromJSON() {
-                fetch('./database.json')
+                // fetch('./testJSON.json')
+                //         .then(function (response) {
+                //             return response.json();
+                //         })
+                //         .then(function (data) {
+                //             appendData(data);
+                //             // console.log(data.projects)
+                //         })
+                //         .catch(function (err) {
+                //             console.log('error: ' + err);
+                //         });
+                //     function appendData(json) {
+                //         // console.log(json)
+                //         $(document).ready(function () {
+                //             $.getJSON('./testJSON.json', function (data) {
+                //                 // console.log(data)
+                //                 var randomData = "";
+                //                 $.each(data, function (key, value) {
+                //                     console.log(value)
+                //                     randomData += "<tr>";   
+                //                     randomData += "<td>" +value.title+"<td>";
+                //                     randomData += "<td" + value.funded_by+ "<td>";
+                //                     randomData += "<td" + value.amount + "<td>";
+                //                     randomData += "<td" + value.status + "<td>";
+                //                     randomData += "</tr>";
+
+                //                 })
+                //                 // console.log(randomData)
+                //                 // console.log(randomData)
+                //                 $("tbody").append(randomData);
+                //             })
+                //         })
+                //     }
+
+                fetch('./database/projects.json')
                     .then(function (response) {
+                        // console.log(response)
                         return response.json();
                     })
                     .then(function (data) {
-                        appendData(data);
-                        // console.log(data.projects)
+                        // console.log(data)
+                        funCall(data)
                     })
                     .catch(function (err) {
                         console.log('error: ' + err);
                     });
-                function appendData(data) {
-                    // document.getElementById("showData").innerHTML = typeof data.projects 
-                    const size = Object.values(data).length
+                function funCall(data) {
 
-                    // console.log(size)
-                    var col = [];
-                    for (let [key, value] of Object.entries(data.projects)) {
-                        // col.push(key);
+                    var html = "<table border = 1>";
+                    // html += "<thead>"
+                    // html += "<tr>"
+                    // html += "<td>" + 'Title' + "</td>"
+                    // html += "<td>" + 'Funded_By' + "</td>"
+                    // html += "<td>" + 'Amount' + "</td>"
+                    // html += "<td>" + 'Status' + "</td>"
+                    // html += "</tr>"
+                    // html += "</thead>"
+                    for (var i = 0; i < data.length; i++) {
+                        console.log(data[i].title)
+                        html += '<tr>'
+                        html += '<td>' + data[i].title + '</td>'
+                        html += '<td>' + data[i].funded_by + '</td>'
+                        html += '<td>' + data[i].amount + '</td>'
+                        html += '<td>' + data[i].status + '</td>'
+                        html += '</tr>'
                     }
-                    // console.log(col)
-
-
-                    
-
-
-
-
-
-
-
-
-                    // var col = [];
-                    // for (var i = 0; i < element.length; i++) {
-                    //     for (var key in myBooks[i]) {
-                    //         if (col.indexOf(key) === -1) {
-                    //             col.push(key);
-                    //         }
-                    //     }
-                    // }
-
-                    // // CREATE DYNAMIC TABLE.
-                    // var table = document.createElement("table");
-
-                    // // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-
-                    // var tr = table.insertRow(-1);                   // TABLE ROW.
-
-                    // for (var i = 0; i < col.length; i++) {
-                    //     var th = document.createElement("th");      // TABLE HEADER.
-                    //     th.innerHTML = col[i];
-                    //     tr.appendChild(th);
-                    // }
-
-                    // // ADD JSON DATA TO THE TABLE AS ROWS.
-                    // for (var i = 0; i < myBooks.length; i++) {
-
-                    //     tr = table.insertRow(-1);
-
-                    //     for (var j = 0; j < col.length; j++) {
-                    //         var tabCell = tr.insertCell(-1);
-                    //         tabCell.innerHTML = myBooks[i][col[j]];
-                    //     }
-                    // }
-
-                    // // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-                    // var divContainer = document.getElementById("showData");
-                    // divContainer.innerHTML = "";
-                    // divContainer.appendChild(table);
-
-
-
+                    document.getElementById("tbody").innerHTML = html
                 }
-
-
-
-
-
-                // var myBooks = [
-                //     {
-                //         "Book ID": "1",
-                //         "Book Name": "Computer Architecture",
-                //         "Category": "Computers",
-                //         "Price": "125.60"
-                //     },
-                //     {
-                //         "Book ID": "2",
-                //         "Book Name": "Asp.Net 4 Blue Book",
-                //         "Category": "Programming",
-                //         "Price": "56.00"
-                //     },
-                //     {
-                //         "Book ID": "3",
-                //         "Book Name": "Popular Science",
-                //         "Category": "Science",
-                //         "Price": "210.40"
-                //     }
-                // ]
-
-                // EXTRACT VALUE FOR HTML HEADER. 
-                // ('Book ID', 'Book Name', 'Category' and 'Price')
-                // var col = [];
-                // for (var i = 0; i < myBooks.length; i++) {
-                //     for (var key in myBooks[i]) {
-                //         if (col.indexOf(key) === -1) {
-                //             col.push(key);
-                //         }
-                //     }
-                // }
-
-                // // CREATE DYNAMIC TABLE.
-                // var table = document.createElement("table");
-
-                // // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-
-                // var tr = table.insertRow(-1);                   // TABLE ROW.
-
-                // for (var i = 0; i < col.length; i++) {
-                //     var th = document.createElement("th");      // TABLE HEADER.
-                //     th.innerHTML = col[i];
-                //     tr.appendChild(th);
-                // }
-
-                // // ADD JSON DATA TO THE TABLE AS ROWS.
-                // for (var i = 0; i < myBooks.length; i++) {
-
-                //     tr = table.insertRow(-1);
-
-                //     for (var j = 0; j < col.length; j++) {
-                //         var tabCell = tr.insertCell(-1);
-                //         tabCell.innerHTML = myBooks[i][col[j]];
-                //     }
-                // }
-
-                // // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-                // var divContainer = document.getElementById("showData");
-                // divContainer.innerHTML = "";
-                // divContainer.appendChild(table);
-            }
+            </script>
+        </section>
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     </body>

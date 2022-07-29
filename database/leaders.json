@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Dr. Haleem Farman",
+        "phd": "University of Peshawar, Pakistan",
+        "major": "Computer Science",
+        "google_h_index": "18",
+        "total_google_citations": "1204",
+        "total_scopus_citations": "",
+        "orcid_id": "",
+        "feilds_of_interests": "Wireless Metworks, Mobile Adhoc Network, Wireless, Sensors Network",
+        "affiliations": ""
+    },
+    {
+        "name": "Dr. Jamil Ahmad",
+        "phd": "Sejong University, Seoul, South korea",
+        "major": "Computer Science",
+        "google_h_index": "29",
+        "total_google_citations": "3213",
+        "total_scopus_citations": "",
+        "orcid_id": "",
+        "feilds_of_interests": "Image Processing, Pattern Recognition, Computer Vision, Machine Intelligence, Deep Learning, Web Development",
+        "affiliations": ""
+    }
+]

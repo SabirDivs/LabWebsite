@@ -1,14 +1,20 @@
-{
-    "p": {
-        "p1": "abc",
-        "p2": "def",
-        "p3": "ghi"
+[
+    {
+        "title": "Assisting Farmers in Plant Disease Detection and Treatment at Early Stages using Smart Phone Application",
+        "funded_by": "Sustainable Development Unit, P&D Dept. Govt. of Khyber Pakhtunkhwa, Pakistan",
+        "amount": "PKR 9.002 Million",
+        "status": "Completed"
     },
-    "q": {
-        "q1": "jkl",
-        "q2": "mno",
-        "q3": "pqr"
+    {
+        "title": "Monitoring of Fruit Plants for Disease Identification using Deep Learning",
+        "funded_by": "Higher Education Commission, Islamabad, Pakistan",
+        "amount": "PKR 11.761 million",
+        "status": "Completed"
+    },
+    {
+        "title": "Monitoring of Fruit Plants for Disease Identification using Deep Learning",
+        "funded_by": "Higher Education Commission, Islamabad, Pakistan",
+        "amount": "PKR 11.761 million",
+        "status": "Completed"
     }
-
-
-}
+]

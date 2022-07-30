@@ -93,3 +93,22 @@
 // for (let [key, value] of Object.entries(p)) {
 //   console.log(`${key}: ${value}`);
 // }
+
+// testJSON.js data
+[
+  {
+    title:
+      "Assisting Farmers in Plant Disease Detection and Treatment at Early Stages using Smart Phone Application",
+    funded_by:
+      "Sustainable Development Unit, P&D Dept. Govt. of Khyber Pakhtunkhwa, Pakistan",
+    amount: "PKR 9.002 Million",
+    status: "Completed",
+  },
+  {
+    title:
+      "Monitoring of Fruit Plants for Disease Identification using Deep Learning",
+    funded_by: "Higher Education Commission, Islamabad, Pakistan",
+    amount: "PKR 11.761 million",
+    status: "Completed",
+  },
+];

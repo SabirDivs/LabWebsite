@@ -9,17 +9,18 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="../styles.css">
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Convert JSON Data to HTML Table</title>
     </head>
 
     <body>
-        <div class="container">
-            <h1 class="display-4">Dynomic data entry Testing page</h1>
-        </div>
-        <section>
+        <section id="table section">
             <div class="container">
+                <h1 class="display-5 text-center">Dynomic table</h1>
                 <table class="table" id="table">
                     <thead>
                         <tr id="thead-tr">
@@ -71,7 +72,7 @@
                 //         })
                 //     }
 
-                fetch('./database/projects.json')
+                fetch('../database/projects.json')
                     .then(function (response) {
                         // console.log(response)
                         return response.json();
@@ -95,7 +96,7 @@
                     // html += "</tr>"
                     // html += "</thead>"
                     for (var i = 0; i < data.length; i++) {
-                        console.log(data[i].title)
+                        // console.log(data[i].title)
                         html += '<tr>'
                         html += '<td>' + data[i].title + '</td>'
                         html += '<td>' + data[i].funded_by + '</td>'
@@ -107,7 +108,75 @@
                 }
             </script>
         </section>
-        </script>
+
+
+
+
+        <!-- <section id="cards-sections">
+            <script>
+                fetch('./testJSON.json')
+                    .then(function (response) {
+                        // console.log(response)
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        // console.log(data)
+                        funCall(data)
+                    })
+                    .catch(function (err) {
+                        console.log('error: ' + err);
+                    });
+                function funCall(data) {
+                    let htmlCode = ``;
+                    data.forEach(function (singleElephantObjects) {
+                        // console.log(singleElephantObjects)
+                        // uncomment the line below, to see each of the 4 objects rendered in the console.
+                        //console.log(singleElephantObjects);
+
+                        // we take our previous empty htmlCode variable and add our html codes to it.
+
+                        // because the forEach method returns objects, we can then use the dot notation to reference children of the object, e.g, elephant.title;
+                        htmlCode =
+                            htmlCode +
+                            `<article>
+                                <div>
+                                    <img src="${singleElephantObjects.pictureUrl}" alt="${singleElephantObjects.imageAlt}">
+                                </div>
+                                <div>
+                                <h3>Title: ${singleElephantObjects.title}</h3>
+                                <p>Color: ${singleElephantObjects.color}</p>
+                                <p>Age: ${singleElephantObjects.age}</p>
+                                </div>
+                            </article>`;
+                        // uncomment the line below to see the output in the browser console.
+                        // console.log(htmlCode);
+                    });
+
+                    // currently, we have out html code showing in the browser console, we need to send it to our html file and render it there.
+                    // here we define out the cards we want to be rendered to the DOM.
+
+                    // ".all-elephant-cards" is the class of the empty div back in our index.html. We want to render the cards from our JS inside that div.
+
+                    // we are simply saying, "let elephantCards be = to that div", to target that div, we reference the class we gave to it.
+                    const elephantCards = document.getElementById("card-columns")
+
+                    // here's how we do the render;
+                    // since elephantCards is now = to that div, we now say let the inside of that div take in our htmlCode variable that holds our html codes.
+                    elephantCards.innerHTML = htmlCode;
+                }
+
+            </script>
+            <div class="container">
+                <h1 class="display-5 text-center">Dynomic cards</h1>
+                <div class="card-group" id="card-columns">
+
+                </div>
+            </div>
+            </div>
+
+
+            <!-- <div id="card-container"></div> -->
+        </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>

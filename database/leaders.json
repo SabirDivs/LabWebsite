@@ -1,5 +1,7 @@
 [
     {
+        "id": "",
+        "img": "https://icp.edu.pk/staff_directory/faculty_images/halemm_farman.jpg",
         "name": "Dr. Haleem Farman",
         "phd": "University of Peshawar, Pakistan",
         "major": "Computer Science",
@@ -11,6 +13,8 @@
         "affiliations": ""
     },
     {
+        "id": "",
+        "img": "https://icp.edu.pk/staff_directory/faculty_images/jamil_thumb.jpg",
         "name": "Dr. Jamil Ahmad",
         "phd": "Sejong University, Seoul, South korea",
         "major": "Computer Science",

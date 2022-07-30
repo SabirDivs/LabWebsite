@@ -9,8 +9,7 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="./styles.css">
-
+        <link rel="stylesheet" href="../styles.css">
         <title>team</title>
     </head>
 
@@ -55,170 +54,119 @@
         <!-- navbar ends here -->
 
         <!--  -->
-        <script>
 
-            fetch('./database.json')
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    appendData(data);
-                    // console.log(data.leaders)
-                })
-                .catch(function (err) {
-                    console.log('error: ' + err);
-                });
-            function appendData(data) {
-                // leader_1 data
-                // console.log(data.leaders.leader_1)
-                document.getElementById("leader_1_name").innerHTML = data.leaders.leader_1.name;
-                document.getElementById("leader_1_phd").innerHTML = data.leaders.leader_1.phd;
-                document.getElementById("leader_1_G_index").innerHTML = data.leaders.leader_1.google_h_index;
-                document.getElementById("leader_1_G_citations").innerHTML = data.leaders.leader_1.total_google_citations;
-                document.getElementById("leader_1_S_citations").innerHTML = data.leaders.leader_1.total_scopus_citations;
-                document.getElementById("leader_1_orcid").innerHTML = data.leaders.leader_1.orcid_id;
-                document.getElementById("leader_1_FOI").innerHTML = data.leaders.leader_1.feilds_of_interests;
-                document.getElementById("leader_1_affiliation").innerHTML = data.leaders.leader_1.affiliations;
-
-
-
-                // Leader_2 Data
-                console.log(data.leaders.leader_2)
-                document.getElementById("leader_2_name").innerHTML = data.leaders.leader_2.name;
-                document.getElementById("leader_2_phd").innerHTML = data.leaders.leader_2.phd;
-                document.getElementById("leader_2_G_index").innerHTML = data.leaders.leader_2.google_h_index;
-                document.getElementById("leader_2_G_citations").innerHTML = data.leaders.leader_2.total_google_citations;
-                document.getElementById("leader_2_S_citations").innerHTML = data.leaders.leader_2.total_scopus_citations;
-                document.getElementById("leader_2_orcid").innerHTML = data.leaders.leader_2.orcid_id;
-                document.getElementById("leader_2_FOI").innerHTML = data.leaders.leader_2.feilds_of_interests;
-                document.getElementById("leader_2_affiliation").innerHTML = data.leaders.leader_2.affiliations;
-
-                // var mainContainer = document.getElementById("team-Leaders");
-                // const allElements = document.getElementsByTagName('*');
-
-                // for (const element of allElements) {
-                //     if(element.id = "team-Leaders"){
-                //         console.log("fksfj")
-
-                //     }
-
-                //     // if (element.textContent === 'Box 2') {
-                //     //     break;
-                //     // }
-                // }
-
-
-
-
-
-
-
-
-            }
-        </script>
         <section id="team-Leaders " class="text-center py-5">
             <div class="container">
                 <div class="header my-5">
                     <h1>Team Leaders </h1>
                     <p class="text-muted">Meet and Greet our Team Leaders</p>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="img-block mb-5" id="leader1">
-                                <img style="height: 120px; width: 120px;"
-                                    src="https://icp.edu.pk/staff_directory/faculty_images/halemm_farman.jpg"
-                                    class="img-fluid  img-thumbnail rounded-circle" alt="image1">
-                                <div class="content mt-2">
-                                    <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
-                                        class="text-reset">
-                                        <!-- https://docs.google.com/document/d/1ZQHPPN3_b5ARYAt5hZ0dt2XX6wR6geMT/edit?usp=sharing&ouid=105807333424226961915&rtpof=true&sd=true -->
-                                        <h4 id="leader_1_name"></h4>
-                                    </a>
-                                    <div class="card-body" style="text-align: left">
-                                        <span>PhD:</span>
-                                        <p id="leader_1_phd" style="all: unset;"></p><br>
-                                        <span>Google h-index:</span>
-                                        <p id="leader_1_G_index" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Total Google Citations:</span>
-                                        <p id="leader_1_G_citations" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Total SCOPUS Citations:</span>
-                                        <p id="leader_1_S_citations" style="all: unset;"></p><br>
-                                        <span style="all: unset;">ORCID ID:</span>
-                                        <p id="leader_1_orcid" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Feilds of Interest:</span>
-                                        <p id="leader_1_FOI" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Affiliation:</span>
-                                        <p id="leader_1_affiliation"></p>
-                                        <a href="" class="me-4 text-reset">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
-                                            class="me-4 text-reset">
-                                            <i class="fab fa-google"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/haleem-farman-0a8a7611"
-                                            class="me-4 text-reset">
-                                            <i class="fab fa-linkedin"></i>
-                                        </a>
-                                        <a href="" class="me-4 text-reset">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                    </div>
-                                    <!-- <p class="text-muted">Speciality</p> -->
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="img-block mb-5">
-                                <img style="height: 120px; width: 120px;"
-                                    src="https://icp.edu.pk/staff_directory/faculty_images/jamil_thumb.jpg"
-                                    class="img-fluid  img-thumbnail rounded-circle" alt="image1">
-                                <div class="content mt-2">
-                                    <a href="https://scholar.google.com/citations?user=7dw-9YgAAAAJ&hl=en&oi=ao"
-                                        class="text-reset">
-                                        <h4 id="leader_2_name"></h4>
-                                    </a>
-                                    <div class="card-body" style="text-align: left">
-                                        <span>PhD:</span>
-                                        <p id="leader_2_phd" style="all: unset;"></p><br>
-                                        <span>Google h-index:</span>
-                                        <p id="leader_2_G_index" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Total Google Citations:</span>
-                                        <p id="leader_2_G_citations" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Total SCOPUS Citations:</span>
-                                        <p id="leader_2_S_citations" style="all: unset;"></p><br>
-                                        <span style="all: unset;">ORCID ID:</span>
-                                        <p id="leader_2_orcid" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Feilds of Interest:</span>
-                                        <p id="leader_2_FOI" style="all: unset;"></p><br>
-                                        <span style="all: unset;">Affiliation:</span>
-                                        <p id="leader_2_affiliation"></p>
-                                        <a href="" class="me-4 text-reset">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="https://scholar.google.com/citations?user=7dw-9YgAAAAJ&hl=en&oi=ao"
-                                            class="me-4 text-reset">
-                                            <i class="fab fa-google"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/jamilahmadicp" class="me-4 text-reset">
-                                            <i class="fab fa-linkedin"></i>
-                                        </a>
-                                        <a href="https://github.com/jamilahmadicp" class="me-4 text-reset">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                    </div>
-                                    <!-- <p class="text-muted">Speciality</p> -->
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="row justify-content-center" id="card-data">
                 </div>
+                <script>
+                    window.onload = function () {
+                        // const data = [
+                        //     {
+                        //         id: "",
+                        //         img: "https://icp.edu.pk/staff_directory/faculty_images/halemm_farman.jpg",
+                        //         name: "Dr. Haleem Farman",
+                        //         phd: "University of Peshawar, Pakistan",
+                        //         major: "Computer Science",
+                        //         google_h_index: "18",
+                        //         total_google_citations: "1204",
+                        //         total_scopus_citations: "",
+                        //         orcid_id: "",
+                        //         feilds_of_interests: "Wireless Metworks, Mobile Adhoc Network, Wireless, Sensors Network",
+                        //         affiliations: ""
+                        //     },
+                        //     {
+                        //         id: "",
+                        //         img: "https://icp.edu.pk/staff_directory/faculty_images/jamil_thumb.jpg",
+                        //         name: "Dr. Jamil Ahmad",
+                        //         phd: "Sejong University, Seoul, South korea",
+                        //         major: "Computer Science",
+                        //         google_h_index: "29",
+                        //         total_google_citations: "3213",
+                        //         total_scopus_citations: "",
+                        //         orcid_id: "",
+                        //         feilds_of_interests: "Image Processing, Pattern Recognition, Computer Vision, Machine Intelligence, Deep Learning, Web Development",
+                        //         saffiliations: ""
+                        //     }
+                        // ]
+                        // console.log(data)
+                        fetch('../database/leaders.json')
+                            .then(function (response) {
+                                // console.log(response)
+                                return response.json();
+                            })
+                            .then(function (data) {
+                                // console.log(data)
+                                funCall(data)
+                            })
+                            .catch(function (err) {
+                                console.log('error: ' + err);
+                            });
+                        function funCall(data) {
+
+                            let output = '';
+                            for (let item of data) {
+                                console.log(item.img)
+                                output +=
+                                    `
+                                    <div class="col-md-6 col-lg-4">
+                                    <div class="card text-center">
+                                        <div class="img-block mb-5" id="leader1">
+                                            <img style="height: 120px; width: 120px;" src=${item.img}
+                                                class="img-fluid  img-thumbnail rounded-circle" alt="image1">
+                                            <div class="content mt-2">
+                                                <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
+                                                    class="text-reset">
+                                                    <!-- https://docs.google.com/document/d/1ZQHPPN3_b5ARYAt5hZ0dt2XX6wR6geMT/edit?usp=sharing&ouid=105807333424226961915&rtpof=true&sd=true -->
+                                                    <h4 id="leader_1_name">${item.name}</h4>
+                                                </a>
+                                                <div class="card-body" style="text-align: left">
+                                                    <span>PhD:</span>
+                                                    <p id="leader_1_phd" style="all: unset;">${item.phd}</p><br>
+                                                    <span>Google h-index:</span>
+                                                    <p id="leader_1_G_index" style="all: unset;">${item.google_h_index}</p><br>
+                                                    <span style="all: unset;">Total Google Citations:</span>
+                                                    <p id="leader_1_G_citations" style="all: unset;">${item.total_google_citations}</p><br>
+                                                    <span style="all: unset;">Total SCOPUS Citations:</span>
+                                                    <p id="leader_1_S_citations" style="all: unset;">${item.total_scopus_citations}</p><br>
+                                                    <span style="all: unset;">ORCID ID:</span>
+                                                    <p id="leader_1_orcid" style="all: unset;">${item.orcid_id}</p><br>
+                                                    <span style="all: unset;">Feilds of Interest:</span>
+                                                    <p id="leader_1_FOI" style="all: unset;">${item.feilds_of_interests}</p><br>
+                                                    <span style="all: unset;">Affiliation:</span>
+                                                    <p id="leader_1_affiliation">${item.affiliations}</p>
+                                                    <a href="" class="me-4 text-reset">
+                                                        <i class="fab fa-twitter"></i>
+                                                    </a>
+                                                    <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
+                                                        class="me-4 text-reset">
+                                                        <i class="fab fa-google"></i>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/haleem-farman-0a8a7611"
+                                                        class="me-4 text-reset">
+                                                        <i class="fab fa-linkedin"></i>
+                                                    </a>
+                                                    <a href="" class="me-4 text-reset">
+                                                        <i class="fab fa-github"></i>
+                                                    </a>
+                                                </div>
+                                                <!-- <p class="text-muted">Speciality</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    `;
+                            }
+                            console.log(output)
+                            document.getElementById("card-data").innerHTML = output;
+                        }
+
+                    }
+                </script>
             </div>
         </section>
         <section id="researchers" class="text-center py-5">
@@ -226,34 +174,62 @@
                 <div class="header my-5">
                     <h1>Researchers </h1>
                 </div>
-                <div class="card-columns">
-                    <div class="card">
-                        <div class="card-body " style="text-align: left">
-                            <h4 class="card-title">Researcher-1</h4>
-                            <p><span>PhD:</span><br>
+
+                <script>
+                    window.onload = function () {
+
+                        fetch('../database/researchers.json')
+                            .then(function (response) {
+                                return response.json();
+                            })
+                            .then(function (data) {
+                                // console.log(data)
+                                appendData(data);
+                            })
+                            .catch(function (err) {
+                                console.log('error: ' + err);
+                            });
+                        function appendData(data) {
+                            let researcherCard = '';
+                            for (let item of data) {
+                                // console.log(item)
+                                researcherCard +=
+                                    `
+                            <div class="card">
+                                <div class="card-body" style="text-align: left">
+                                <h4 class="card-title">Researcher-1</h4>
+                                <p><span>PhD:</span><br>
                                 <span>Google h-index:</span><br>
                                 <span>Total Google Citations:</span><br>
                                 <span>Total SCOPUS Citations:</span><br>
                                 <span>ORCID ID:</span><br>
                                 <span>Feilds of Interest:</span><br>
                                 <span>Affiliation:</span><br>
-                            </p>
-                            <a href="" class="me-4 text-reset">
+                                </p>
+                                <a href="" class="me-4 text-reset">
                                 <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
+                                </a>
+                                <a href="" class="me-4 text-reset">
                                 <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
+                                </a>
+                                <a href="" class="me-4 text-reset">
                                 <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                <i class="fab fa-github"></i></a>   
+                                </div>
+                            </div>
+                            `;
+                            }
+                            document.getElementById("card-columns").innerHTML = researcherCard;
+                        }
+                    };
+                </script>
+
+                <div class="card-columns">
                     <div class="card">
-                        <div class="card-body" style="text-align: left">
-                            <h4 class="card-title">Researcher-2</h4>
+                        <div class="card-body " style="text-align: left">
+                            <h4 class="card-title">Researcher-1</h4>
                             <p><span>PhD:</span><br>
                                 <span>Google h-index:</span><br>
                                 <span>Total Google Citations:</span><br>
@@ -459,7 +435,8 @@
                             </h6>
                             <div class="col">
                                 <p>
-                                    A research and AI lab at Islamia College Peshawar. We work on deep learning backed
+                                    A research and AI lab at Islamia College Peshawar. We work on deep learning
+                                    backed
                                     applications in variour areas.
                                 </p>
                             </div>

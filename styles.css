@@ -11,9 +11,7 @@ body {
 .about-header{
     background-image: url(./Images/banner1.jpeg);
 }
-/* #header{
-    height: auto;
-} */
+
 .navbar {
     min-height: auto;
 }
@@ -26,7 +24,7 @@ body {
 }
 
 .navbar-toggle {
-    /* (80px - button height 34px) / 2 = 23px */
+   
     margin-top: 23px;
     padding: 9px 10px !important;
 }
@@ -96,12 +94,7 @@ body {
 	font-size: 18px;
 	font-weight: 500
 }
-/*
-.counter-box i {
-	font-size: 60px;
-	margin: 0 0 15px;
-	color: #d2d2d2
-} */
+
  
 .counter { 
 	font-size: 32px;
@@ -109,17 +102,6 @@ body {
 	color: #666;
 	line-height: 28px
 }
-/* 
-.counter-box.colored {
-      background: #3acf87;
-}
-
-.counter-box.colored p,
-.counter-box.colored i,
-.counter-box.colored .counter {
-	color: #fff
-} */
-
 
 #LabHeader{
     height: 200px;

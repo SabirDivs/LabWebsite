@@ -10,7 +10,12 @@
             "total_scopus_citations": "",
             "orcid_id": "",
             "feilds_of_interests": "Wireless Metworks, Mobile Adhoc Network, Wireless, Sensors Network",
-            "affiliations": ""
+            "affiliations": "",
+            "resume": "https://docs.google.com/document/d/1ZQHPPN3_b5ARYAt5hZ0dt2XX6wR6geMT/edit?usp=sharing&ouid=105807333424226961915&rtpof=true&sd=true",
+            "twitter": "",
+            "google_Scholar":"https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao",
+            "linkin": "https://www.linkedin.com/in/haleem-farman-0a8a7611",
+            "github": ""
         },
         {
             "img": "https://icp.edu.pk/staff_directory/faculty_images/jamil_thumb.jpg",
@@ -22,7 +27,12 @@
             "total_scopus_citations": "",
             "orcid_id": "",
             "feilds_of_interests": "Image Processing, Pattern Recognition, Computer Vision, Machine Intelligence, Deep Learning, Web Development",
-            "affiliations": ""
+            "affiliations": "",
+            "resume": "https://docs.google.com/document/d/1kUA_BCtwnvQAcntS522nXzsQenyGfiRH/edit?usp=sharing&ouid=105807333424226961915&rtpof=true&sd=true",
+            "twitter": "",
+            "google_Scholar": "https://scholar.google.com/citations?user=7dw-9YgAAAAJ&hl=en&oi=ao",
+            "linkin": "https://www.linkedin.com/in/jamilahmadicp",
+            "github": ""
         }
     ],
     "researchers": [
@@ -51,7 +61,7 @@
         },
         {
 
-            "name": "Researcher-2",
+            "name": "Researcher-3",
             "phd": "",
             "major": "",
             "google_h_index": "",

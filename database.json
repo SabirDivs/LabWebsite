@@ -1,6 +1,7 @@
 {
-    "leaders":{
-        "leader_1": {
+    "leaders": [
+        {
+            "img": "https://icp.edu.pk/staff_directory/faculty_images/halemm_farman.jpg",
             "name": "Dr. Haleem Farman",
             "phd": "University of Peshawar, Pakistan",
             "major": "Computer Science",
@@ -11,7 +12,8 @@
             "feilds_of_interests": "Wireless Metworks, Mobile Adhoc Network, Wireless, Sensors Network",
             "affiliations": ""
         },
-        "leader_2": {
+        {
+            "img": "https://icp.edu.pk/staff_directory/faculty_images/jamil_thumb.jpg",
             "name": "Dr. Jamil Ahmad",
             "phd": "Sejong University, Seoul, South korea",
             "major": "Computer Science",
@@ -22,11 +24,11 @@
             "feilds_of_interests": "Image Processing, Pattern Recognition, Computer Vision, Machine Intelligence, Deep Learning, Web Development",
             "affiliations": ""
         }
-    },
-    "researchers": {
-        "#1": {
+    ],
+    "researchers": [
+        {
             "name": "Researcher-1",
-            "phd": "",
+            "phd": "erfijfiwejfsklfj riofjio fj sdkfj ksdf ",
             "major": "",
             "google_h_index": "",
             "total_google_citations": "",
@@ -35,7 +37,8 @@
             "feilds_of_interests": "",
             "affiliations": ""
         },
-        "#2": {
+        {
+
             "name": "Researcher-2",
             "phd": "",
             "major": "",
@@ -46,9 +49,9 @@
             "feilds_of_interests": "",
             "affiliations": ""
         }
-    },
-    "research_assistants": {
-        "#1": {
+    ],
+    "research_assistants": [
+        {
             "name": "R-assistants-1",
             "phd": "",
             "major": "",
@@ -59,7 +62,7 @@
             "feilds_of_interests": "",
             "affiliations": ""
         },
-        "#2": {
+        {
             "name": "R-assistants-1",
             "phd": "",
             "major": "",
@@ -70,42 +73,7 @@
             "feilds_of_interests": "",
             "affiliations": ""
         },
-        "#3": {
-            "name": "R-assistants-1",
-            "phd": "",
-            "major": "",
-            "google_h_index": "",
-            "total_google_citations": "",
-            "total_scopus_citations": "",
-            "orcid_id": "",
-            "feilds_of_interests": "",
-            "affiliations": ""
-        }
-    },
-    "current_phd_students": {
-        "#1": {
-            "name": "R-assistants-1",
-            "phd": "",
-            "major": "",
-            "google_h_index": "",
-            "total_google_citations": "",
-            "total_scopus_citations": "",
-            "orcid_id": "",
-            "feilds_of_interests": "",
-            "affiliations": ""
-        },
-        "#2": {
-            "name": "R-assistants-1",
-            "phd": "",
-            "major": "",
-            "google_h_index": "",
-            "total_google_citations": "",
-            "total_scopus_citations": "",
-            "orcid_id": "",
-            "feilds_of_interests": "",
-            "affiliations": ""
-        },
-        "#3": {
+        {
             "name": "R-assistants-1",
             "phd": "",
             "major": "",
@@ -116,27 +84,12 @@
             "feilds_of_interests": "",
             "affiliations": ""
         }
-    },
-    "undergraduate_students": {
-        "#1": {
-            "name": "Umair",
+    ],
+    "current_phd_students": [
+        {
+            "name": "student-1",
             "phd": "",
-            "MSCS": "MSCS",
-            "BSCS": "",
-            "major": "Computer Science",
-            "google_h_index": "",
-            "total_google_citations": "",
-            "total_scopus_citations": "",
-            "orcid_id": "",
-            "feilds_of_interests": "Computer Vision, Machine Learning, Internet of Things,",
-            "affiliations": "Smart Technologies lab, Islamia College Peshawar, Pakistan."
-        },
-        "#2": {
-            "name": "Sultan Zaib",
-            "phd": "",
-            "MSCS": "MSCS",
-            "BSCS": "",
-            "major": "Computer Science",
+            "major": "",
             "google_h_index": "",
             "total_google_citations": "",
             "total_scopus_citations": "",
@@ -144,10 +97,43 @@
             "feilds_of_interests": "",
             "affiliations": ""
         },
-        "#3": {
-            "name": "R-assistants-1",
+        {
+            "name": "student-2",
             "phd": "",
-            "MSCS": "",
+            "major": "",
+            "google_h_index": "",
+            "total_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        },
+        {
+            "name": "student-3",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "total_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        }
+    ],
+    "undergraduate_students": [
+        {
+            "name": "student-1",
+            "BSCS": "",
+            "major": "",
+            "google_h_index": "",
+            "total_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        },
+        {
+            "name": "student-2",
             "BSCS": "",
             "major": "",
             "google_h_index": "",
@@ -157,20 +143,19 @@
             "feilds_of_interests": "",
             "affiliations": ""
         }
-    },
-    "projects":{
-        "id_1":{
-            "title":"Assisting Farmers in Plant Disease Detection and Treatment at Early Stages using Smart Phone Application",
-            "funded_by":"Sustainable Development Unit, P&D Dept. Govt. of Khyber Pakhtunkhwa, Pakistan",
-            "amount":"PKR 9.002 Million",
-            "status":"Completed"
+    ],
+    "projects": [
+        {
+            "title": "Assisting Farmers in Plant Disease Detection and Treatment at Early Stages using Smart Phone Application",
+            "funded_by": "Sustainable Development Unit, P&D Dept. Govt. of Khyber Pakhtunkhwa, Pakistan",
+            "amount": "PKR 9.002 Million",
+            "status": "Completed"
         },
-        "id_2":{
-            "title":"Monitoring of Fruit Plants for Disease Identification using Deep Learning",
-            "funded_by":"Higher Education Commission, Islamabad, Pakistan",
-            "amount":"PKR 11.761 million",
-            "status":"Completed"
+        {
+            "title": "Monitoring of Fruit Plants for Disease Identification using Deep Learning",
+            "funded_by": "Higher Education Commission, Islamabad, Pakistan",
+            "amount": "PKR 11.761 million",
+            "status": "Completed"
         }
-
-    }
+    ]
 }

@@ -1,6 +1,6 @@
 [
     {
-        "name": "Researcher-1",
+        "name": "Researcher-Assistant-1",
         "phd": "",
         "major": "",
         "google_h_index": "",
@@ -9,5 +9,8 @@
         "orcid_id": "",
         "feilds_of_interests": "",
         "affiliations": ""
+    },
+    {
+        
     }
 ]

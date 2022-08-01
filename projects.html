@@ -57,90 +57,29 @@
         <div class="banner">
             <div class="container">
                 <h1 class="text-center">Some Text data if Required</h1>
-                <h1 class="text-center">
-                    We can Also play A video here in the background but that will make the
-                    website heavy.
-                </h1>
+                <h1 class="text-center"></h1>
             </div>
         </div>
-        <!-- Banner Area ends here -->
-        <!-- 
-     Dynomic Approach to add table row as per number of records   
-     -->
-        <!-- <script>
-            fetch('./database.json')
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    appendData(data);
-                    // console.log(data.projects)
-                })
-                .catch(function (err) {
-                    console.log('error: ' + err);
-                });
-            function appendData(data) {
-                Object.values(data.projects).forEach(element => {
-                    console.log(element)
-                });
-            }
-        </script> -->
 
         <section id="projects">
-            <!-- <div class="container">
-            <h1 class="display-4 text-center">Projects</h1>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Funded By</th>
-                        <th>Amount</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row">Assisting Farmers in Plant Disease Detection and Treatment at Early Stages using Smart Phone Application </td>
-                        <td>Sustainable Development Unit, P&D Dept. Govt. of Khyber Pakhtunkhwa, Pakistan</td>
-                        <td>PKR 9.002 Million</td>
-                        <td>Completed</td>
-                    </tr>
-                    <tr>
-                        <td scope="row">Monitoring of Fruit Plants for Disease Identification using Deep Learning</td>
-                        <td>Higher Education Commission, Islamabad, Pakistan</td>
-                        <td>PKR 11.761 million</td>
-                        <td>Completed</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> -->
             <script>
-                fetch('./database/projects.json')
+                fetch('./database.json')
                     .then(function (response) {
                         // console.log(response)
                         return response.json();
                     })
                     .then(function (data) {
                         // console.log(data)
-                        funCall(data)
+                        funCall(data.projects)
                     })
                     .catch(function (err) {
                         console.log('error: ' + err);
                     });
                 function funCall(data) {
-
+                    console.log(data)
                     var html = "<table border = 1>";
-                    // html += "<thead>"
-                    // html += "<tr>"
-                    // html += "<td>" + 'Title' + "</td>"
-                    // html += "<td>" + 'Funded_By' + "</td>"
-                    // html += "<td>" + 'Amount' + "</td>"
-                    // html += "<td>" + 'Status' + "</td>"
-                    // html += "</tr>"
-                    // html += "</thead>"
-
                     for (var i = 0; i < data.length; i++) {
-                        console.log(data[i].title)
+                        // console.log(data[i].title)
                         html += '<tr>'
                         html += '<td>' + data[i].title + '</td>'
                         html += '<td>' + data[i].funded_by + '</td>'
@@ -161,16 +100,11 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody id="tbody">
-
-                    </tbody>
+                    <tbody id="tbody"></tbody>
                 </table>
             </div>
-
         </section>
 
-
-        <!-- Footer Starts Here -->
         <!-- Footer -->
         <footer class="footer text-center text-lg-start bg-dark text-light">
             <!-- Section: Social media -->

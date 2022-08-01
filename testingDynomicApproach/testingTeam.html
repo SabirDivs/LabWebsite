@@ -54,128 +54,322 @@
         <!-- navbar ends here -->
 
         <!--  -->
+        <script>
+            window.onload = function () {
+                fetch('../testingDynomicApproach/testJSON.json')
+                    .then(function (response) {
+                        // console.log(response)
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        funCall(data)
+                    })
+                    .catch(function (err) {
+                        console.log('error: ' + err);
+                    });
+                function funCall(data) {
+                    // console.log(data)
+                    let leadersObject = data.leaders
+                    let researchers = data.researchers
+                    let researchAssistants = data.research_assistants
+                    let currentPhDStudents = data.current_phd_students
+                    let undergraduateStudents = data.undergraduate_students
+                    // console.log(leadersObject)
+                    let output = '';
+                    for (let item of leadersObject) {
+                        // console.log(item)
+                        output +=
+                            `
+                            <div class="col-md-6 col-lg-4">
+                            <div class="card text-center">
+                                <div class="img-block mb-5" id="leader1">
+                                    <img style="height: 120px; width: 120px;" src=${item.img}
+                                        class="img-fluid  img-thumbnail rounded-circle" alt="image1">
+                                    <div class="content mt-2">
+                                        <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
+                                            class="text-reset">
+                                            <!-- https://docs.google.com/document/d/1ZQHPPN3_b5ARYAt5hZ0dt2XX6wR6geMT/edit?usp=sharing&ouid=105807333424226961915&rtpof=true&sd=true -->
+                                            <h4 id="leader_1_name">${item.name}</h4>
+                                        </a>
+                                        <div class="card-body" style="text-align: left">
+                                            <span>PhD:</span>
+                                            <p id="leader_1_phd" style="all: unset;">${item.phd}</p><br>
+                                            <span>Google h-index:</span>
+                                            <p id="leader_1_G_index" style="all: unset;">${item.google_h_index}</p><br>
+                                            <span style="all: unset;">Total Google Citations:</span>
+                                            <p id="leader_1_G_citations" style="all: unset;">${item.total_google_citations}</p><br>
+                                            <span style="all: unset;">Total SCOPUS Citations:</span>
+                                            <p id="leader_1_S_citations" style="all: unset;">${item.total_scopus_citations}</p><br>
+                                            <span style="all: unset;">ORCID ID:</span>
+                                            <p id="leader_1_orcid" style="all: unset;">${item.orcid_id}</p><br>
+                                            <span style="all: unset;">Feilds of Interest:</span>
+                                            <p id="leader_1_FOI" style="all: unset;">${item.feilds_of_interests}</p><br>
+                                            <span style="all: unset;">Affiliation:</span>
+                                            <p id="leader_1_affiliation">${item.affiliations}</p>
+                                            <a href="" class="me-4 text-reset">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
+                                                class="me-4 text-reset">
+                                                <i class="fab fa-google"></i>
+                                            </a>
+                                            <a href="https://www.linkedin.com/in/haleem-farman-0a8a7611"
+                                                class="me-4 text-reset">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a href="" class="me-4 text-reset">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                        <!-- <p class="text-muted">Speciality</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            `;
+                    }
+                    document.getElementById("leader-card").innerHTML = output;
 
+                    let researcherCard = '';
+                    for (let item of researchers) {
+                        // console.log(item)
+                        researcherCard +=
+                            `
+                        <div class="card">
+                        <div class="card-body" style="text-align: left">
+                        <div class="card-title"><h4>${item.name}</d4></div>
+                        <span>PhD:</span>
+                        <p id="leader_1_phd" style="all: unset;">${item.phd}</p><br>
+                        <span>Google h-index:</span>
+                        <p id="leader_1_G_index" style="all: unset;">${item.google_h_index}</p><br>
+                        <span style="all: unset;">Total Google Citations:</span>
+                        <p id="leader_1_G_citations" style="all: unset;">${item.total_google_citations}</p><br>
+                        <span style="all: unset;">Total SCOPUS Citations:</span>
+                        <p id="leader_1_S_citations" style="all: unset;">${item.total_scopus_citations}</p><br>
+                        <span style="all: unset;">ORCID ID:</span>
+                        <p id="leader_1_orcid" style="all: unset;">${item.orcid_id}</p><br>
+                        <span style="all: unset;">Feilds of Interest:</span>
+                        <p id="leader_1_FOI" style="all: unset;">${item.feilds_of_interests}</p><br>
+                        <span style="all: unset;">Affiliation:</span>
+                        <p id="leader_1_affiliation">${item.affiliations}</p>
+                        <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                        <i class="fab fa-github"></i></a>   
+                        </div>
+                        </div>
+                        `;
+                    }
+                    document.getElementById("researcher-card").innerHTML = researcherCard;
+
+                    let researcher_Ass_Card = '';
+                    for (let item of researchAssistants) {
+                        // console.log(item)
+                        researcher_Ass_Card +=
+                            `
+                                <div class="card">
+                                <div class="card-body" style="text-align: left">
+                                <h4 class="card-title">${item.name}</h4>
+                                <p><span>PhD:</span> ${item.phd}<br>
+                                <span>Google h-index:</span>${item.google_h_index}<br>
+                                <span>Total Google Citations:</span>${item.total_google_citations}<br>
+                                <span>Total SCOPUS Citations:</span>${item.total_scopus_citations}<br>
+                                <span>ORCID ID:</span>${item.orcid_id}<br>
+                                <span>Feilds of Interest:</span>${item.feilds_of_interests}<br>
+                                <span>Affiliation:</span>${item.affiliations}<br>
+                                </p>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-github"></i></a>
+                            </div>
+    
+                        </div>
+                                `;
+                    }
+                    document.getElementById("research-ass-card").innerHTML = researcher_Ass_Card;
+
+                    let current_PhD_Students_Card = '';
+                    for (let item of currentPhDStudents) {
+                        // console.log(item)
+                        current_PhD_Students_Card +=
+                            `
+                            <div class="card">
+                            <div class="card-body" style="text-align: left">
+                                <h4 class="card-title">${item.name}</h4>
+                                <p><span>PhD:</span> ${item.phd}<br>
+                                <span>Google h-index:</span>${item.google_h_index}<br>
+                                <span>Total Google Citations:</span>${item.total_google_citations}<br>
+                                <span>Total SCOPUS Citations:</span>${item.total_scopus_citations}<br>
+                                <span>ORCID ID:</span>${item.orcid_id}<br>
+                                <span>Feilds of Interest:</span>${item.feild_of_interests}<br>
+                                <span>Affiliation:</span>${item.affiliations}<br>
+                                </p>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            </div>
+                        `
+                        document.getElementById("current-phd-students").innerHTML = current_PhD_Students_Card;
+                    }
+
+
+                    let undergraduate_students_card = '';
+                    for (let item of undergraduateStudents) {
+                        console.log(item)
+                        undergraduate_students_card +=
+                            `
+                            <div class="card">
+                            <div class="card-body" style="text-align: left">
+                                <h4 class="card-title">${item.name}</h4>
+                                <p><span>BSCS:</span> ${item.phd}<br>
+                                <span>Google h-index:</span>${item.google_h_index}<br>
+                                <span>Total Google Citations:</span>${item.total_google_citations}<br>
+                                <span>Total SCOPUS Citations:</span>${item.total_scopus_citations}<br>
+                                <span>ORCID ID:</span>${item.orcid_id}<br>
+                                <span>Feilds of Interest:</span>${item.feild_of_interests}<br>
+                                <span>Affiliation:</span>${item.affiliations}<br>
+                                </p>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            </div>
+                        `
+                    }
+                    document.getElementById("undergraduate-students-card").innerHTML = undergraduate_students_card
+
+
+
+                }
+            }
+        </script>
         <section id="team-Leaders " class="text-center py-5">
             <div class="container">
                 <div class="header my-5">
                     <h1>Team Leaders </h1>
                     <p class="text-muted">Meet and Greet our Team Leaders</p>
                 </div>
-                <div class="row justify-content-center" id="card-data">
+                <div class="row justify-content-center" id="leader-card">
                 </div>
                 <script>
-                    window.onload = function () {
-                        // const data = [
-                        //     {
-                        //         id: "",
-                        //         img: "https://icp.edu.pk/staff_directory/faculty_images/halemm_farman.jpg",
-                        //         name: "Dr. Haleem Farman",
-                        //         phd: "University of Peshawar, Pakistan",
-                        //         major: "Computer Science",
-                        //         google_h_index: "18",
-                        //         total_google_citations: "1204",
-                        //         total_scopus_citations: "",
-                        //         orcid_id: "",
-                        //         feilds_of_interests: "Wireless Metworks, Mobile Adhoc Network, Wireless, Sensors Network",
-                        //         affiliations: ""
-                        //     },
-                        //     {
-                        //         id: "",
-                        //         img: "https://icp.edu.pk/staff_directory/faculty_images/jamil_thumb.jpg",
-                        //         name: "Dr. Jamil Ahmad",
-                        //         phd: "Sejong University, Seoul, South korea",
-                        //         major: "Computer Science",
-                        //         google_h_index: "29",
-                        //         total_google_citations: "3213",
-                        //         total_scopus_citations: "",
-                        //         orcid_id: "",
-                        //         feilds_of_interests: "Image Processing, Pattern Recognition, Computer Vision, Machine Intelligence, Deep Learning, Web Development",
-                        //         saffiliations: ""
-                        //     }
-                        // ]
-                        // console.log(data)
-                        fetch('../database/leaders.json')
-                            .then(function (response) {
-                                // console.log(response)
-                                return response.json();
-                            })
-                            .then(function (data) {
-                                // console.log(data)
-                                funCall(data)
-                            })
-                            .catch(function (err) {
-                                console.log('error: ' + err);
-                            });
-                        function funCall(data) {
+                    // window.onload = function () {
+                    //     fetch('../database/leaders.json')
+                    //         .then(function (response) {
 
-                            let output = '';
-                            for (let item of data) {
-                                console.log(item.img)
-                                output +=
-                                    `
-                                    <div class="col-md-6 col-lg-4">
-                                    <div class="card text-center">
-                                        <div class="img-block mb-5" id="leader1">
-                                            <img style="height: 120px; width: 120px;" src=${item.img}
-                                                class="img-fluid  img-thumbnail rounded-circle" alt="image1">
-                                            <div class="content mt-2">
-                                                <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
-                                                    class="text-reset">
-                                                    <!-- https://docs.google.com/document/d/1ZQHPPN3_b5ARYAt5hZ0dt2XX6wR6geMT/edit?usp=sharing&ouid=105807333424226961915&rtpof=true&sd=true -->
-                                                    <h4 id="leader_1_name">${item.name}</h4>
-                                                </a>
-                                                <div class="card-body" style="text-align: left">
-                                                    <span>PhD:</span>
-                                                    <p id="leader_1_phd" style="all: unset;">${item.phd}</p><br>
-                                                    <span>Google h-index:</span>
-                                                    <p id="leader_1_G_index" style="all: unset;">${item.google_h_index}</p><br>
-                                                    <span style="all: unset;">Total Google Citations:</span>
-                                                    <p id="leader_1_G_citations" style="all: unset;">${item.total_google_citations}</p><br>
-                                                    <span style="all: unset;">Total SCOPUS Citations:</span>
-                                                    <p id="leader_1_S_citations" style="all: unset;">${item.total_scopus_citations}</p><br>
-                                                    <span style="all: unset;">ORCID ID:</span>
-                                                    <p id="leader_1_orcid" style="all: unset;">${item.orcid_id}</p><br>
-                                                    <span style="all: unset;">Feilds of Interest:</span>
-                                                    <p id="leader_1_FOI" style="all: unset;">${item.feilds_of_interests}</p><br>
-                                                    <span style="all: unset;">Affiliation:</span>
-                                                    <p id="leader_1_affiliation">${item.affiliations}</p>
-                                                    <a href="" class="me-4 text-reset">
-                                                        <i class="fab fa-twitter"></i>
-                                                    </a>
-                                                    <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
-                                                        class="me-4 text-reset">
-                                                        <i class="fab fa-google"></i>
-                                                    </a>
-                                                    <a href="https://www.linkedin.com/in/haleem-farman-0a8a7611"
-                                                        class="me-4 text-reset">
-                                                        <i class="fab fa-linkedin"></i>
-                                                    </a>
-                                                    <a href="" class="me-4 text-reset">
-                                                        <i class="fab fa-github"></i>
-                                                    </a>
-                                                </div>
-                                                <!-- <p class="text-muted">Speciality</p> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                    `;
-                            }
-                            console.log(output)
-                            document.getElementById("card-data").innerHTML = output;
-                        }
+                    //             return response.json();
+                    //         })
+                    //         .then(function (data) {
 
-                    }
+                    //             funCall(data)
+                    //         })
+                    //         .catch(function (err) {
+                    //             console.log('error: ' + err);
+                    //         });
+                    //     function funCall(data) {
+
+                    //         let output = '';
+                    //         for (let item of data) {
+
+                    //             output +=
+                    //                 `
+                    //                 <div class="col-md-6 col-lg-4">
+                    //                 <div class="card text-center">
+                    //                     <div class="img-block mb-5" id="leader1">
+                    //                         <img style="height: 120px; width: 120px;" src=${item.img}
+                    //                             class="img-fluid  img-thumbnail rounded-circle" alt="image1">
+                    //                         <div class="content mt-2">
+                    //                             <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
+                    //                                 class="text-reset">
+                    //                                 <!-- https://docs.google.com/document/d/1ZQHPPN3_b5ARYAt5hZ0dt2XX6wR6geMT/edit?usp=sharing&ouid=105807333424226961915&rtpof=true&sd=true -->
+                    //                                 <h4 id="leader_1_name">${item.name}</h4>
+                    //                             </a>
+                    //                             <div class="card-body" style="text-align: left">
+                    //                                 <span>PhD:</span>
+                    //                                 <p id="leader_1_phd" style="all: unset;">${item.phd}</p><br>
+                    //                                 <span>Google h-index:</span>
+                    //                                 <p id="leader_1_G_index" style="all: unset;">${item.google_h_index}</p><br>
+                    //                                 <span style="all: unset;">Total Google Citations:</span>
+                    //                                 <p id="leader_1_G_citations" style="all: unset;">${item.total_google_citations}</p><br>
+                    //                                 <span style="all: unset;">Total SCOPUS Citations:</span>
+                    //                                 <p id="leader_1_S_citations" style="all: unset;">${item.total_scopus_citations}</p><br>
+                    //                                 <span style="all: unset;">ORCID ID:</span>
+                    //                                 <p id="leader_1_orcid" style="all: unset;">${item.orcid_id}</p><br>
+                    //                                 <span style="all: unset;">Feilds of Interest:</span>
+                    //                                 <p id="leader_1_FOI" style="all: unset;">${item.feilds_of_interests}</p><br>
+                    //                                 <span style="all: unset;">Affiliation:</span>
+                    //                                 <p id="leader_1_affiliation">${item.affiliations}</p>
+                    //                                 <a href="" class="me-4 text-reset">
+                    //                                     <i class="fab fa-twitter"></i>
+                    //                                 </a>
+                    //                                 <a href="https://scholar.google.com/citations?user=obyugpYAAAAJ&hl=en&oi=ao"
+                    //                                     class="me-4 text-reset">
+                    //                                     <i class="fab fa-google"></i>
+                    //                                 </a>
+                    //                                 <a href="https://www.linkedin.com/in/haleem-farman-0a8a7611"
+                    //                                     class="me-4 text-reset">
+                    //                                     <i class="fab fa-linkedin"></i>
+                    //                                 </a>
+                    //                                 <a href="" class="me-4 text-reset">
+                    //                                     <i class="fab fa-github"></i>
+                    //                                 </a>
+                    //                             </div>
+                    //                             <!-- <p class="text-muted">Speciality</p> -->
+                    //                         </div>
+                    //                     </div>
+                    //                 </div>
+                    //             </div>
+                    //                 `;
+                    //         }
+                    //         document.getElementById("leader-card").innerHTML = output;
+                    //     }
+                    // }
                 </script>
             </div>
         </section>
+
+
+
         <section id="researchers" class="text-center py-5">
             <div class="container">
                 <div class="header my-5">
                     <h1>Researchers </h1>
                 </div>
 
-                <script>
+                <!-- <script>
                     window.onload = function () {
 
                         fetch('../database/researchers.json')
@@ -197,15 +391,21 @@
                                     `
                             <div class="card">
                                 <div class="card-body" style="text-align: left">
-                                <h4 class="card-title">Researcher-1</h4>
-                                <p><span>PhD:</span><br>
-                                <span>Google h-index:</span><br>
-                                <span>Total Google Citations:</span><br>
-                                <span>Total SCOPUS Citations:</span><br>
-                                <span>ORCID ID:</span><br>
-                                <span>Feilds of Interest:</span><br>
-                                <span>Affiliation:</span><br>
-                                </p>
+                                <div class="card-title"><h4>${item.name}</d4></div>
+                                <span>PhD:</span>
+                                <p id="leader_1_phd" style="all: unset;">${item.phd}</p><br>
+                                <span>Google h-index:</span>
+                                <p id="leader_1_G_index" style="all: unset;">${item.google_h_index}</p><br>
+                                <span style="all: unset;">Total Google Citations:</span>
+                                <p id="leader_1_G_citations" style="all: unset;">${item.total_google_citations}</p><br>
+                                <span style="all: unset;">Total SCOPUS Citations:</span>
+                                <p id="leader_1_S_citations" style="all: unset;">${item.total_scopus_citations}</p><br>
+                                <span style="all: unset;">ORCID ID:</span>
+                                <p id="leader_1_orcid" style="all: unset;">${item.orcid_id}</p><br>
+                                <span style="all: unset;">Feilds of Interest:</span>
+                                <p id="leader_1_FOI" style="all: unset;">${item.feilds_of_interests}</p><br>
+                                <span style="all: unset;">Affiliation:</span>
+                                <p id="leader_1_affiliation">${item.affiliations}</p>
                                 <a href="" class="me-4 text-reset">
                                 <i class="fab fa-twitter"></i>
                                 </a>
@@ -224,171 +424,96 @@
                             document.getElementById("card-columns").innerHTML = researcherCard;
                         }
                     };
-                </script>
+                </script> -->
 
-                <div class="card-columns">
-                    <div class="card">
-                        <div class="card-body " style="text-align: left">
-                            <h4 class="card-title">Researcher-1</h4>
-                            <p><span>PhD:</span><br>
-                                <span>Google h-index:</span><br>
-                                <span>Total Google Citations:</span><br>
-                                <span>Total SCOPUS Citations:</span><br>
-                                <span>ORCID ID:</span><br>
-                                <span>Feilds of Interest:</span><br>
-                                <span>Affiliation:</span><br>
-                            </p>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
+                <div class="card-columns" id="researcher-card">
+
                 </div>
             </div>
         </section>
+
         <section id="Research-Assistant" class="text-center">
             <div class="container">
                 <div class="header my-5">
                     <h1>Research Assistants </h1>
                 </div>
-                <div class="card-columns">
-                    <div class="card">
-                        <div class="card-body" style="text-align: left">
-                            <h4 class="card-title">Researcher-Ass-1</h4>
-                            <p><span>PhD:</span><br>
-                                <span>Google h-index:</span><br>
-                                <span>Total Google Citations:</span><br>
-                                <span>Total SCOPUS Citations:</span><br>
-                                <span>ORCID ID:</span><br>
-                                <span>Feilds of Interest:</span><br>
-                                <span>Affiliation:</span><br>
-                            </p>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-github"></i></a>
-                        </div>
+                <!-- <script>
+                    window.onload = function () {
 
-                    </div>
-                    <div class="card">
-                        <div class="card-body" style="text-align: left">
-                            <h4 class="card-title">Researcher-Ass-2</h4>
-                            <p><span>PhD:</span><br>
+                        fetch('../database/researchAssistants.json')
+                            .then(function (response) {
+                                return response.json();
+                            })
+                            .then(function (data) {
+                                // console.log(data)
+                                appendData(data);
+                            })
+                            .catch(function (err) {
+                                console.log('error: ' + err);
+                            });
+                        function appendData(data) {
+                            let researcher_Ass_Card = '';
+                            for (let item of data) {
+                                researcher_Ass_Card +=
+                                    `
+                                <div class="card">
+                                <div class="card-body" style="text-align: left">
+                                <h4 class="card-title">Researcher-Ass-1</h4>
+                                <p><span>PhD:</span><br>
                                 <span>Google h-index:</span><br>
                                 <span>Total Google Citations:</span><br>
                                 <span>Total SCOPUS Citations:</span><br>
                                 <span>ORCID ID:</span><br>
                                 <span>Feilds of Interest:</span><br>
                                 <span>Affiliation:</span><br>
-                            </p>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-github"></i></a>
+                                </p>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-github"></i></a>
+                            </div>
+    
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body" style="text-align: left">
-                            <h4 class="card-title">Researcher-Ass-3</h4>
-                            <p><span>PhD:</span><br>
-                                <span>Google h-index:</span><br>
-                                <span>Total Google Citations:</span><br>
-                                <span>Total SCOPUS Citations:</span><br>
-                                <span>ORCID ID:</span><br>
-                                <span>Feilds of Interest:</span><br>
-                                <span>Affiliation:</span><br>
-                            </p>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
+                                `;
+                            }
+                            document.getElementById("research-ass-card").innerHTML = researcher_Ass_Card;
+                        }
+                    }
+                </script> -->
+
+                <div class="card-columns" id="research-ass-card">
+
                 </div>
             </div>
         </section>
+
         <section id="Current-PhD-Students" class="text-center py-5">
             <div class="container">
                 <div class="header my-5">
                     <h1>Current Phd Students</h1>
                 </div>
-                <div class="card-columns">
-                    <div class="card">
-                        <div class="card-body" style="text-align: left">
-                            <h4 class="card-title">Student-1</h4>
-                            <p><span>PhD:</span><br>
-                                <span>Google h-index:</span><br>
-                                <span>Total Google Citations:</span><br>
-                                <span>Total SCOPUS Citations:</span><br>
-                                <span>ORCID ID:</span><br>
-                                <span>Feilds of Interest:</span><br>
-                                <span>Affiliation:</span><br>
-                            </p>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
+                </script>
+                <div class="card-columns" id="current-phd-students">
+
                 </div>
             </div>
         </section>
+
+
         <section id="Undergraduate-Students" class="text-center py-5">
             <div class="container">
                 <div class="header my-5">
                     <h1>Undergraduate Students </h1>
                 </div>
-                <div class="card-columns">
-                    <div class="card">
-                        <div class="card-body" style="text-align: left">
-                            <h4 class="card-title">student-1</h4>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body" style="text-align: left">
-                            <h4 class="card-title">Student-2</h4>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
+                <div class="card-columns" id="undergraduate-students-card">
+
                 </div>
             </div>
         </section>
@@ -538,7 +663,7 @@
         <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-        <script src="./behaviour.js"></script>
+        <script src="../behaviour.js"></script>
 
     </body>
 

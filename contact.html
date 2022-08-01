@@ -15,7 +15,7 @@
 
     <body>
         <home id="home"></home>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <a class="navbar-brand font-weight-bold" href="index.html">Smart Tech. Lab</a>
             <button class="navbar-toggler d-lg-none" id="togglerbtn" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -52,42 +52,45 @@
             </div>
         </nav>
         <!-- navbar ends here -->
+        <div class="container">
 
-        <div class="col formDiv">
-            <form action="https://formsubmit.co/c5be589020b57d0099033f1a6e9b2756" class="contact-form" method="POST">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <h3>Send Us a Message</h3>
+            <div class="col formDiv">
+                <form action="https://formsubmit.co/c5be589020b57d0099033f1a6e9b2756" class="contact-form"
+                    method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h3>Send Us a Message</h3>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="Name" id="userName" class="form-control"
+                                    placeholder="Your Name *" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="Email" id="email" class="form-control"
+                                    placeholder="Your Email *" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="Subject" id="subject" class="form-control"
+                                    placeholder="Subject *" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="phoneNumber" name="Phone No." class="form-control" required
+                                    placeholder="Your Phone Number *" />
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="Name" id="userName" class="form-control" placeholder="Your Name *"
-                                required />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="Email" id="email" class="form-control" placeholder="Your Email *"
-                                required />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="Subject" id="subject" class="form-control" placeholder="Subject *"
-                                required />
-                        </div>
-                        <div class="form-group">
-                            <input type="number" id="phoneNumber" name="Phone No." class="form-control" required
-                                placeholder="Your Phone Number *" />
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea name="Message" id="message" class="form-control" placeholder="Your Message *"
+                                    style="width: 100%; height: 150px"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btnContact" value="Send Message" />
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <textarea name="Message" id="message" class="form-control" placeholder="Your Message *"
-                                style="width: 100%; height: 150px"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btnContact" value="Send Message" />
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
 
 

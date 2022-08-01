@@ -28,7 +28,19 @@
     "researchers": [
         {
             "name": "Researcher-1",
-            "phd": "erfijfiwejfsklfj riofjio fj sdkfj ksdf ",
+            "phd": "",
+            "major": "",
+            "google_h_index": "",
+            "total_google_citations": "",
+            "total_scopus_citations": "",
+            "orcid_id": "",
+            "feilds_of_interests": "",
+            "affiliations": ""
+        },
+        {
+
+            "name": "Researcher-2",
+            "phd": "",
             "major": "",
             "google_h_index": "",
             "total_google_citations": "",
@@ -123,17 +135,6 @@
     "undergraduate_students": [
         {
             "name": "student-1",
-            "BSCS": "",
-            "major": "",
-            "google_h_index": "",
-            "total_google_citations": "",
-            "total_scopus_citations": "",
-            "orcid_id": "",
-            "feilds_of_interests": "",
-            "affiliations": ""
-        },
-        {
-            "name": "student-2",
             "BSCS": "",
             "major": "",
             "google_h_index": "",
